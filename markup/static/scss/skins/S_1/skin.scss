@@ -1,0 +1,257 @@
+body {
+    background-color: $primary-fill;
+    font-weight: $font-weight;
+    color: $primary-text;
+}
+
+html {
+    height: 100%;
+    @include respond-from(to-sm) {
+        font-size: $font-size-xs;
+    }
+
+    font-size: $font-size;
+}
+
+@font-face {
+    font-family: 'Gilroy-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Gilroy-Regular"),
+    local("Gilroy-Regular"),
+    url("../fonts/Gilroy-Regular.woff") format("woff"),
+    url("../fonts/Gilroy-Regular.eot") format("eot"),
+    url("../fonts/Gilroy-Regular.ttf") format("truetype");
+}
+
+//Footer bottom
+.w-outer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.w-inner {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+//Footer bottom END
+
+//MAIN WRAPPERS
+.w-center {
+    width: 100%;
+    max-width: $page-width;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 $page-horizontal-gap;
+
+    @include respond-from(sm-md) {
+        padding: 0 $page-horizontal-gap-sm;
+    }
+
+    @include respond-from(md-xl) {
+        padding: 0 $page-horizontal-gap-md;
+    }
+}
+
+.text {
+    &__wrap {
+
+    }
+
+    &__wrap-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    &__text {
+        line-height: 1.7;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 500px;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    &__right {
+
+    }
+
+    &__image {
+        max-width: 683px;
+        margin: 20px auto;
+
+        img {
+            display: inline-block;
+            width: 100%;
+            @include support(object-fit, cover) {
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+
+    }
+
+    &__link {
+        font-weight: 500;
+        color: #42A5FF;
+        transition: all .35s ease-in-out;
+
+        &:hover {
+            color: #EF4059;
+        }
+    }
+
+    @include respond-from(md) {
+        &__title {
+            margin-bottom: 24px;
+            font-size: 27px;
+        }
+
+        &__wrap-reverse {
+            display: flex;
+            flex-direction: unset;
+            justify-content: space-between;
+
+            .text__left {
+                margin-right: 20px;
+            }
+        }
+
+        &__image {
+            margin: 0;
+
+        }
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__right {
+            margin: 0;
+        }
+
+        &__mr {
+            margin-right: -50px;
+        }
+
+        &__mr-xl {
+            margin-right: -88px;
+        }
+
+        &__ml {
+            margin-left: -44px;
+        }
+
+    }
+}
+
+//BUTTONS
+.btn {
+    @extend %bttn-reset;
+    padding: 15px 20px;
+    border: 2px solid #4EC2A5;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #223E4C;
+    text-decoration: none;
+    transition: all .35s ease-in-out;
+
+    @include respond-from(md) {
+        padding: 16px 30px;
+    }
+
+    &:hover,
+    &:focus {
+        background: #4EC2A5;
+        color: #fff;
+    }
+}
+
+.btn-nth {
+    @extend %bttn-reset;
+    width: fit-content;
+    padding: 15px 39px;
+    background: #EF4059;
+    border: 2px solid #EF4059;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: all .35s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background: transparent;
+        color: #223E4C;
+    }
+
+}
+
+//gap
+
+.w-gap {
+    &___ {
+        margin-top: 40px;
+    }
+}
+
+.w-gap-sm {
+    margin-top: 60px;
+
+    @include respond-from(md) {
+        margin-top: 60px;
+    }
+}
+
+.w-gap-md {
+    margin-top: 25px;
+
+    @include respond-from(md) {
+        margin-top: 30px;
+    }
+}
+
+.w-gap-lg {
+    margin-top: 60px;
+
+    @include respond-from(sm) {
+        margin-top: 60px;
+    }
+
+    @include respond-from(md) {
+        margin-top: 134px;
+    }
+}
+
+.w-gap-xl {
+    margin-top: 60px;
+
+    @include respond-from(sm) {
+        margin-top: 80px;
+    }
+
+    @include respond-from(md) {
+        margin-top: 310px;
+    }
+}
+
+.fixed-position {
+    overflow-y: hidden;
+}

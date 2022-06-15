@@ -1,0 +1,58 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+}
+
+ul {
+    list-style: disc;
+}
+
+label {
+    cursor: pointer;
+}
+
+body {
+    font-family: $font-main;
+    line-height: $line-height;
+}
+
+h3 {
+    font-size: $font-size-h3;
+    line-height: 1.4;
+    letter-spacing: .3px;
+
+    @include respond-from(sm) {
+        font-size: $font-size-h3-sm;
+    }
+
+    @include respond-from(lg) {
+        font-size: $font-size-h3-lg;
+
+    }
+}
+
+h4 {
+    margin: 20px 0 10px;
+    font-size: $font-size-h4;
+    @include respond-from(sm) {
+        font-size: $font-size-h4-sm;
+    }
+
+    @include respond-from(lg) {
+        font-size: $font-size-h4-lg;
+
+    }
+}
+
+@include respond-from(to-md) {
+    * {
+        outline: none;
+    }
+}

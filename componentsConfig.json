@@ -1,0 +1,31 @@
+{
+  "component_header": {
+    "number": "S_1",
+    "name": "header"
+  },
+
+  "component_countries": {
+    "number": "S_1",
+    "name": "countries"
+  },
+
+  "component_banner": {
+    "number": "S_1",
+    "name": "banner"
+  },
+
+  "component_valuebets": {
+    "number": "S_1",
+    "name": "valuebets"
+  },
+
+  "component_banner-second": {
+    "number": "S_1",
+    "name": "banner-second"
+  },
+
+  "component_footer": {
+    "number": "S_1",
+    "name": "footer"
+  }
+}

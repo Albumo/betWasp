@@ -1,0 +1,93 @@
+.countries {
+
+  &__dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 42px;
+    margin: 0 auto 20px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 8px;
+      height: 5px;
+      margin: 0;
+      border-top: 5px solid #fff;
+      border-right: 5px solid transparent;
+      border-left: 5px solid transparent;
+      transition: .3s;
+    }
+  }
+
+  &__item {
+    margin-top: 8px;
+  }
+
+  &__caption, &__item {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s;
+
+    img {
+      display: inline-block;
+      @include support(object-fit, cover) {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.85);
+    transition: all 0.15s cubic-bezier(0.25, 0, 0.25, 1.75), opacity 0.1s linear;
+    transform-origin: 50% 0;
+  }
+
+  @include respond-from(lg) {
+    &__dropdown {
+      margin: 0 30px 0 0;
+
+      &:after {
+        border-top: 5px solid #223E4C;
+      }
+    }
+  }
+}
+
+.countries__dropdown.open:after {
+  transform: rotate(180deg);
+}
+
+div.countries__dropdown.open>div.countries__list {
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+div.countries__dropdown>div.countries__list>div.countries__item.selected {
+  background: rgba(36, 60, 187, 0.2);
+  pointer-events: none;
+}
+
+div.dropdown>div.countries__caption img,
+div.dropdown>div.list>div.item img {
+  position: absolute;
+  left: 15px;
+  margin-top: 2.5px;
+}
+
+

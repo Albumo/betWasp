@@ -1,0 +1,155 @@
+.footer {
+    background: $footer-bg;
+
+    &__wrapper {
+        padding: 50px 0 0;
+    }
+
+    &__list, &__social, &__privacy, &__security {
+        margin-bottom: 30px;
+        ul {
+            @extend %ul-reset;
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &__social ul, &__security ul{
+        display: flex;
+        gap: 20px;
+    }
+
+    &__link {
+        font-family: 'Gilroy-Regular', sans-serif;
+        font-size: 15px;
+        color: #42A5FF;
+        text-decoration: none;
+        transition: all .35s ease-in-out;
+
+        &:hover {
+            color: #EF4059;
+
+            svg {
+                path {
+                    &:first-child {
+                        fill: #EF4059
+
+                    }
+
+                }
+
+            }
+
+        }
+    }
+
+    &__message {
+        &:hover {
+            svg {
+                path {
+                    fill: #EF4059 !important;
+                }
+            }
+        }
+    }
+
+    &__logo {
+        margin-bottom: 10px;
+    }
+
+    &__middle {
+        font-size: 12px;
+        color: #000
+    }
+
+    &__bottom {
+        text-align: center;
+    }
+
+    &__privacy {
+        margin-bottom: 10px;
+    }
+
+    &__privacy ul {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    &__privacy-link {
+        color: #000;
+        transition: all .35s ease-in-out;
+
+        &:hover {
+            color: #EF4059;
+        }
+    }
+
+    &__security ul {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    @include respond-from(xs) {
+
+        &__wrap {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+
+    @include respond-from(sm) {
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &__social {
+            display: flex;
+            justify-content: flex-end;
+            width: 16%;
+        }
+    }
+
+    @include respond-from(md) {
+
+        &__wrapper {
+            padding: 50px 0 80px;
+        }
+
+        &__social {
+            width: 49%;
+        }
+
+        &__social ul{
+            gap: 30px;
+        }
+
+        &__list, &__social {
+            margin-bottom: 0;
+            ul {
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__security ul {
+            margin-top: 0;
+        }
+
+        &__privacy ul {
+            gap: 30px;
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+.banner-second {
+  &__wrap {
+    padding: 40px 0 80px;
+    background: linear-gradient(90deg, #F5FAFF 0%, #FFF 100%);
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #4C7589;
+  }
+
+  @include respond-from(md) {
+    &__wrap {
+      padding: 120px 0 140px;
+    }
+
+    &__title {
+      max-width: 970px;
+      margin: 0 auto 33px;
+    }
+
+    &__subtitle {
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      margin-top: 35px;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+extends _page-template
+
+block content
+    | <!-- skin 1 -->
+
+    .w-inner
+        +banner
+        .w-center
+            +valuebets
+            .w-gap-lg
+            .text
+                .text__wrap
+                    .text__left
+                        .text__wrapper
+                            .text__title It's literally one click
+                            .text__text You enter your login details and top up your bookie balance. Then press a button, and BetWasp places all the bets for you in the background. You move on to picking your next surebet or valuebet. Easy.
+                    .text__right.text__mr
+                        .text__image
+                            img(class="lazyload" src="static/img/content/text1.png" alt="")
+            .w-gap-lg
+            .text
+                .text__wrap.text__wrap-reverse
+                    .text__left
+                        .text__image
+                            picture
+                                source(type="image/webp" srcset="static/img/content/text2.webp" media="")
+                                img(class="lazyload" src="static/img/general/cork.png" data-src="static/img/content/text2.jpg" alt="")
+
+
+                    .text__right
+                        .text__wrapper
+                            .text__title Full arbing support
+                            .text__text We support both surebets and valuebets. Both available in live mode. So you can work with what you want.
+            .w-gap-lg
+            .text
+                .text__wrap
+                    .text__left
+                        .text__wrapper
+                            .text__title No delays
+                            .text__text Our data is fully synced with the bookies. You always get zero seconds delay and real-time odds.
+                    .text__right.text__mr-xl
+                        .text__image
+                            img(class="lazyload" src="static/img/content/text3.png" alt="")
+
+            .w-gap-lg
+            .text
+                .text__wrap.text__wrap-reverse
+                    .text__left.text__ml
+                        .text__image
+                            img(class="lazyload" src="static/img/content/text4.png" alt="")
+                    .text__right
+                        .text__wrapper
+                            .text__title You are in control
+                            .text__text We automate the betting, but you are in control of which bets to place. No unfortunate surprises.
+
+            .w-gap-lg
+            .text
+                .text__wrap
+                    .text__left
+                        .text__wrapper
+                            .text__title Global bookie coverage
+                            .text__text We support dozens of global and local bookies, so you can work with the ones you like. See supported bookies
+                            a(href="#").text__link here
+                    .text__right
+                        .text__image
+                            .text__image
+                                picture
+                                    source(type="image/webp" srcset="static/img/content/text5.webp" media="")
+                                    img(class="lazyload" src="static/img/general/cork.png" data-src="static/img/content/text5.jpg" alt="")
+            .w-gap-lg
+            .text
+                .text__wrap.text__wrap-reverse
+                    .text__left
+                        .text__image
+                            picture
+                                source(type="image/webp" srcset="static/img/content/text6.webp" media="")
+                                img(class="lazyload" src="static/img/general/cork.png" data-src="static/img/content/text6.jpg" alt="")
+                    .text__right
+                        .text__wrapper
+                            .text__title Available in your language
+                            .text__text The app is fully available in 7 languages so that you can work in your native language.
+        .w-gap-lg
+            +banner-second
